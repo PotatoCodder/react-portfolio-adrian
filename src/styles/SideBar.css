@@ -1,0 +1,87 @@
+/* Sidebar styling for larger screens */
+.sidebar {
+    width: 230px;  /* Reduced from 250px to 200px */
+    background-color: #444;
+    color: white;
+    height: 100vh;  /* Full height */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 999;
+    transition: transform 0.3s ease;  /* Add smooth slide effect */
+  }
+  
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-title, .sidebar-subtitle {
+    color: #ff9800;
+  }
+  
+  /* Links in sidebar */
+  .sidebar-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-links li {
+    margin-bottom: 10px;
+  }
+  .sidebar-links li:hover {
+    color: #ff9800;
+    transform: scale(1.01);
+  }
+  
+  .sidebar-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar-links a:hover {
+    transform: scale(1.01);
+    color: #ff9800;
+  }
+  
+  /* Menu button styling (for mobile) */
+  .menu-button {
+    display: none;  /* Hidden on larger screens */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .menu-button:hover {
+    background-color: #ff9800;
+  }
+  
+  /* Responsive behavior */
+  /* On smaller screens (like mobile) */
+  @media (max-width: 768px) {
+    /* Show the menu button on small screens */
+    .menu-button {
+      display: block;
+    }
+  
+    /* Hide the sidebar by default */
+    .sidebar {
+      transform: translateX(-100%);  /* Move the sidebar off-screen */
+    }
+  
+    /* When sidebar is open, show it */
+    .sidebar.open {
+      transform: translateX(0);  /* Slide the sidebar into view */
+    }
+  }
+  

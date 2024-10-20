@@ -1,0 +1,84 @@
+/* Base styling for the navbar */
+.navbar {
+    background-color: #333; /* Dark background */
+    padding: 10px 20px; /* Padding for the navbar */
+    color: #fff; /* Text color */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width */
+    position: fixed; /* Fix position at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* On top of other elements */
+  }
+  
+  .navbar-container {
+    display: flex; /* Flex layout */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Optional: restrict content width */
+    margin: 0 auto; /* Center the container */
+    width: 100%; /* Full width for container */
+  }
+  
+  .navbar-logo {
+    font-size: 24px; /* Logo size */
+    font-weight: bold; /* Bold text */
+  }
+  
+  .navbar-menu ul {
+    list-style-type: none; /* Remove list styling */
+    display: flex; /* Horizontal layout */
+    justify-content: flex-end; /* Align links to the right */
+    gap: 20px; /* Space between links */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    width: 100%; /* Full width for menu */
+  }
+  
+  .navbar-links li {
+    display: inline-block; /* Keep list items inline */
+  }
+  
+  .navbar-links a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    font-size: 18px; /* Link font size */
+    transition: color 0.3s; /* Smooth transition for hover */
+  }
+  
+  .navbar-links a:hover {
+    color: #ff9800; /* Change color on hover */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center; /* Center text */
+    }
+  
+    /* Keep nav items in a row on smaller screens */
+    .navbar-menu ul {
+      justify-content: center; /* Center links */
+    }
+  
+    .navbar-logo {
+      margin-bottom: 10px; /* Space below logo */
+    }
+  }
+  
+  /* Mobile design for very small screens */
+  @media (max-width: 480px) {
+    .navbar-logo {
+      font-size: 20px; /* Smaller logo size */
+    }
+  
+    .navbar-links a {
+      font-size: 16px; /* Smaller link size */
+    }
+  
+    .navbar-menu ul {
+      flex-wrap: wrap; /* Allow wrapping if necessary */
+    }
+  }
+  

@@ -1,0 +1,39 @@
+/* Global app container */
+
+body{
+    height: 100vh;
+}
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  background-color: #f1f0f0;
+  width: calc(100% - 250px); /* Adjusted width considering the sidebar */
+  height: 100%;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+
+  /* Flexbox for centering content */
+  display: flex; 
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+}
+
+/* Specific styles for the Profile component */
+.profile {
+  text-align: center; /* Center text */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* Main content fills full screen when sidebar is collapsed */
+    width: 100%;    /* Ensure it takes full width on small screens */
+  }
+}

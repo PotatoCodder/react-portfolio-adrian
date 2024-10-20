@@ -1,0 +1,84 @@
+/* Profile.css */
+
+.profile {
+    display: flex;
+    align-items: center;     /* Align items vertically centered */
+    justify-content: center;  /* Center items horizontally */
+    text-align: left;        /* Align text to the left */
+    padding: 20px;           /* Padding around the content */
+    flex-wrap: wrap;         /* Allow items to wrap on smaller screens */
+    opacity: 0;              /* Start as invisible for animation */
+    transform: translateY(40px); /* Start lower for slide-up effect */
+    animation: fadeInUp 0.5s forwards; /* Animation */
+}
+
+/* Add the keyframes for fade-in and slide-up animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* End state: fully visible */
+        transform: translateY(0); /* End state: back to original position */
+    }
+}
+
+.profile-text {
+    margin-right: 20px;      /* Reduced space between text and image */
+    flex: 1;                 /* Allow text to take available space */
+}
+
+.profile-image {
+    margin-left: 20px;       /* Reduced margin for responsiveness */
+    width: 300px;            /* Width for the image */
+    height: 300px;           /* Height for the image */
+    border-radius: 10%;      /* Slight rounding for a softer look */
+    object-fit: cover;       /* Maintain aspect ratio */
+}
+
+.profile-title {
+    font-size: 100px;        /* Increased font size for the title */
+    color: #333;             /* Dark color for the title */
+    margin: 0;               /* Remove default margin */
+}
+
+.profile-role {
+    font-size: 70px;         /* Increased font size for the role */
+    color: #666;             /* Slightly lighter color for the role */
+    margin: 0;               /* Remove default margin */
+}
+
+.profile-name {
+    font-size: 30px;         /* Increased font size for the name */
+    color: #444;             /* Darker color for the name */
+    margin-top: 5px;        /* Space above the name */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;     /* Center align items */
+    }
+
+    .profile-text {
+        margin-right: 0;        /* Remove right margin on small screens */
+        text-align: center;     /* Center text on small screens */
+    }
+
+    .profile-image {
+        margin-left: 0;         /* Remove left margin on small screens */
+        margin-top: 20px;       /* Space above the image */
+        width: 250px;           /* Adjust image size for smaller screens */
+        height: 250px;          /* Adjust height for smaller screens */
+    }
+
+    .profile-title {
+        font-size: 70px;        /* Adjust font size for smaller screens */
+    }
+
+    .profile-role {
+        font-size: 50px;        /* Adjust font size for smaller screens */
+    }
+
+    .profile-name {
+        font-size: 25px;        /* Adjust font size for smaller screens */
+    }
+}

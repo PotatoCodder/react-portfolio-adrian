@@ -1,0 +1,99 @@
+.languages-section {
+  padding: 20px;
+  text-align: center; /* Center the title */
+  margin-top: 50px; /* Base margin to create space between the header and the section */
+}
+
+.languages-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px; /* Spacing between title and the cards */
+}
+
+.languages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+  grid-gap: 25px; /* Space between the cards */
+  padding: 20px;
+}
+
+.language-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px; /* Padding for card content */
+  transition: transform 0.2s, box-shadow 0.2s;
+  opacity: 0; /* Start as invisible for animation */
+  transform: translateY(20px); /* Start lower for slide-up effect */
+  animation: fadeInUp 0.5s forwards; /* Animation */
+}
+
+/* Add the keyframes for fade-in and slide-up animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* End state: fully visible */
+    transform: translateY(0); /* End state: back to original position */
+  }
+}
+
+.language-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.language-name {
+  font-size: 20px; /* Font size for language name */
+  font-weight: bold;
+  color: #333;
+}
+
+.language-description {
+  font-size: 15px; /* Description text size */
+  color: #666;
+  margin-top: 15px; /* Space between name and description */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .languages {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+
+  /* More margin for section to avoid header overlap */
+  .languages-section {
+    margin-top: 100px; /* Adjusted margin for better spacing on smaller screens */
+  }
+
+  .language-card {
+    padding: 25px; /* Less padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .languages {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+
+  /* Extra margin for mobile screens */
+  .languages-section {
+    margin-top: 800px; /* Increased margin for very small screens */
+  }
+
+  .language-card {
+    padding: 20px; /* Reduced padding for mobile view */
+  }
+
+  .languages-title {
+    font-size: 28px; /* Smaller title font on very small screens */
+  }
+
+  .language-name {
+    font-size: 18px; /* Smaller name font */
+  }
+
+  .language-description {
+    font-size: 14px; /* Smaller description text */
+  }
+}
